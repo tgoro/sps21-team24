@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Business Form</h1>
+    <p>In this project, we want to give small businesses a platform and an opportunity to make themselves
+        more accessible to nearby customers. Please enter the information down below to be featured on our map.
+    </p>
+    <form action="/form-handler" method="POST">
+        <p>Business Name:</p> 
+        <textarea name="bus-name">name</textarea>
+        <br/>
+         <input type="submit" />
+        <p>Business Description:</p> 
+        <textarea name="bus-description">description</textarea>
+        <br/>
+         <input type="submit" />
+        <p>Business Address:</p> 
+        <textarea name="bus-address">address</textarea>
+        <br/>
+         <input type="submit" />
+        <p>Business Contact Information:</p> 
+        <textarea name="bus-contact">contact information</textarea>
+        <br/>
+         <input type="submit" />
+    </form>
+  </body>
+</html>
