@@ -3,7 +3,132 @@
   margin-right: auto;
   width: 650px;
 }
+body, html {
+  height: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.83m;
+  color: #666;
+  
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
 
-#greeting-container {
-  margin-top: 20px;
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color:#666 ;
+}
+
+.pimg1, .pimg2, .pimg3{
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1{
+  background-image: url('/images/background1.png');
+  min-height: 100%;
+}
+
+ .pimg3{
+  background-image: url('/images/background3.png');
+  min-height: 400px;
+}
+
+.section{
+  text-align: center;
+  padding: 40px 80px;
+
+}
+
+.section-light{
+  padding: 100px, 0px;  
+  background-color: #f1f1f1;
+  color: #666;
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+}
+
+.section-dark{
+  background-color: #282e34;
+  color:#ddd ;
+}
+.form{
+    text-align: center;
+}
+
+.ptext{
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 35px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border{
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.ptext .border .trans{
+  background-color: transparent;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment: scroll;
+  }
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding-top: 500px;
+  padding-left: 300px;;
+  text-align: center;
+  position: absolute;
+  color: white;
+}
+
+.copyright a {
+  font-size: 16px;
+  color: #48dbfb;
+  font-weight: 500;
 }
