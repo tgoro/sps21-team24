@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Business</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk2GMSTNQYkhpA66gFxJPBAZfbU00TrcQ"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="BusinessInfoForm.html">Business</a></li>
+  <li><a href="Customer.html">Consumer</a></li>
+</ul>
+
+<body onload="initMap();">
+    <section class="section section-light">     
+                  <div class="ptext">
+                    <span class="border trans">
+                        Small Business Locator based on Maps
+                    </span>
+                <div id="map"></div>
+                    <button onclick="setLocation()">Set Location</button>
+                </div>
+      </section>
+</body>
+</html>
