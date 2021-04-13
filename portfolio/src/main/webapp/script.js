@@ -26,6 +26,67 @@ function setLocation() {
 
 }
 
+//~~~~~~~~~~~~~~~~~~UIUC Map Demo Button~~~~~~~~~~~~~~~~~~
+
+
+function demoMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 14,
+    center: {lat: 40.10908, lng: -88.22101},
+
+  });
+  setMarkers(map);
+}
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+const smallBusinesses = [
+  ["Baker's Bikes", 40.104310, -88.198180, 3],
+  ["Flying Machine Avionics", 40.115200, -88.238430, 1],
+  ["Dixon Graphics",40.108950, -88.244120, 2],
+  ["Fleurish", 40.117000, -88.242050, 4],
+
+];
+
+function setMarkers(map) {
+  // Adds markers to the map.
+  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+  // (0,0) is located in the top left of the image.
+  // Origins, anchor positions and coordinates of the marker increase in the X
+  // direction to the right and in the Y direction down.
+  const image = {
+    url:
+      "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(20, 32),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32),
+  };
+  // Shapes define the clickable region of the icon. The type defines an HTML
+  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+  // The final coordinate closes the poly by connecting to the first coordinate.
+  const shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: "poly",
+  };
+
+  for (let i = 0; i < smallBusinesses.length; i++) {
+    const smallBusiness = smallBusinesses[i];
+    new google.maps.Marker({
+      position: { lat: smallBusiness[1], lng: smallBusiness[2] },
+      map,
+      zIndex: smallBusiness[3],
+    });
+  }
+}
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~find location function~~~~~~~~~~~~~~~~~~
 
 let map, infoWindow;
 
@@ -111,3 +172,6 @@ function createTaskElement(task) {
   taskElement.appendChild(titleElement);
   return taskElement;
 }
+
+
+
